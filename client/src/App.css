@@ -1,18 +1,30 @@
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+
 .App {
   text-align: center;
 }
 
+/* Adjusting logo size for better visibility */
 .App-logo {
-  height: 40vmin;
+  height: 80px;
   pointer-events: none;
+  transition: transform 0.3s ease-in-out;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Hover effect on logo */
+.App-logo:hover {
+  transform: scale(1.1);
 }
 
+/* Adding a subtle box shadow to the header for depth */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -20,14 +32,32 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 1.5rem;
   color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Increasing link contrast for better readability */
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
 }
 
+/* Hover effect on link */
+.App-link:hover {
+  color: #45aaf2;
+}
+
+/* Animation for the logo spin */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+/* Keyframes for logo spin animation */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +65,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Button styling */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #61dafb;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover effect on button */
+.button:hover {
+  background-color: #45aaf2;
 }
